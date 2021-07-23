@@ -1,0 +1,57 @@
+$ cat GCF_*.fna | grep "^>" | sed -e 's/sp. /sp_/g' | awk '{print $3}' | sort | uniq -c | sort -nr
+    120 melitensis
+     43 suis
+     40 abortus
+     16 canis
+     12 anthropi
+      5 pinnipedialis
+      4 sp_BTU1
+      4 pituitosa
+      4 ceti
+      3 sp_6810
+      2 sp_BO3
+      2 sp_BO2
+      2 sp_458
+      2 sp_2280
+      2 sp_2002734562
+      2 sp_10RB9215
+      2 sp_09RB8910
+      2 sp_09RB8471
+      2 pseudogrignonensis
+      2 ovis
+      2 microti
+      2 intermedia
+      2 inopinata
+      
+      Relative Counts (grouped) wrt Total,
+      (120/277)*100 = 43.32 %
+      https://www.wolframalpha.com/input/?i=%28120%2F277%29*100
+      
+      (43/277)*100 = 15.52 %
+      https://www.wolframalpha.com/input/?i=%2843%2F277%29*100
+      
+      (40/277)*100 = 14.44 %
+      https://www.wolframalpha.com/input/?i=%2840%2F277%29*100
+      
+      (16/277)*100 = 5.78 %
+      https://www.wolframalpha.com/input/?i=%2816%2F277%29*100
+      
+      (12/277)*100 = 4.33 %
+      https://www.wolframalpha.com/input/?i=%2812%2F277%29*100
+      
+      (5/277)*100 = 1.81 %
+      https://www.wolframalpha.com/input/?i=%285%2F277%29*100
+      
+      (4/277)*100 = 1.44 %
+      https://www.wolframalpha.com/input/?i=%284%2F277%29*100
+      
+      (3/277)*100 = 1.08 %
+      https://www.wolframalpha.com/input/?i=%283%2F277%29*100
+      
+      (2/277)*100 = 0.72 %
+      https://www.wolframalpha.com/input/?i=%282%2F277%29*100
+      
+      
+      
+      
+
