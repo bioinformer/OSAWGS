@@ -1,0 +1,18 @@
+$ wc -l assembly_summary.txt 
+220573 assembly_summary.txt
+
+$ cat assembly_summary.txt | awk -F "\t" '$11=="latest"' | wc -l
+220571
+https://www.wolframalpha.com/input/?i=%28220571+%2F+220573%29*100+%3D
+
+$ cat assembly_summary.txt | awk -F "\t" '$12=="Complete Genome" && $11=="latest"{print $20}' | wc -l
+21950
+https://www.wolframalpha.com/input/?i=%2821950+%2F+220571%29*100+%3D
+
+$ cat assembly_summary.txt | grep -c "Brucella"
+846
+https://www.wolframalpha.com/input/?i=%28846+%2F+21950%29*100+%3D
+
+$ cat assembly_summary.txt | awk -F "\t" '$0 ~ /Brucella/ && $12=="Complete Genome" && $11=="latest"{print $20}' | wc -l
+141
+https://www.wolframalpha.com/input/?i=%28141+%2F+846%29*100+%3D
