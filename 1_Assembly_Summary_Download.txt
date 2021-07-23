@@ -1,0 +1,38 @@
+$ time wget -c ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt
+--2021-07-23 10:30:37--  ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt
+           => ‘assembly_summary.txt’
+Resolving ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)... 2607:f220:41e:250::7, 2607:f220:41e:250::13, 130.14.250.11, ...
+Connecting to ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)|2607:f220:41e:250::7|:21... failed: Connection timed out.
+Connecting to ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)|2607:f220:41e:250::13|:21... failed: Connection timed out.
+Connecting to ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)|130.14.250.11|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /genomes/refseq/bacteria ... done.
+==> SIZE assembly_summary.txt ... 67642168
+==> PASV ... done.    ==> RETR assembly_summary.txt ... done.
+Length: 67642168 (65M) (unauthoritative)
+
+assembly_summary.txt                                90%[=====================================================================================================>           ]  58.23M   258KB/s    in 3m 23s  
+
+2021-07-23 10:38:26 (294 KB/s) - Control connection closed.
+Retrying.
+
+--2021-07-23 10:38:27--  ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/bacteria/assembly_summary.txt
+  (try: 2) => ‘assembly_summary.txt’
+Connecting to ftp.ncbi.nlm.nih.gov (ftp.ncbi.nlm.nih.gov)|130.14.250.11|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /genomes/refseq/bacteria ... done.
+==> SIZE assembly_summary.txt ... 67642168
+==> PASV ... done.    ==> REST 61060712 ... done.    
+==> RETR assembly_summary.txt ... done.
+Length: 67642168 (65M), 6581456 (6.3M) remaining (unauthoritative)
+
+assembly_summary.txt                               100%[+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=============>]  66.35M   244KB/s    in 16s     
+
+2021-07-23 10:38:47 (518 KB/s) - ‘assembly_summary.txt’ saved [69572352]
+
+
+real	8m9.918s
+user	0m0.279s
+sys	0m1.817s
