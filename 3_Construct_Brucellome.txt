@@ -287,3 +287,6 @@ ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/018/798/825/GCF_018798825.1_ASM187988
 
 $ time cat ftpfilepaths | parallel -j 20 --verbose --progress "wget -c {}"
 
+$ gunzip GCF_*.fna.gz
+$ cat GCF_*.fna | tee brucellome.fa
+
